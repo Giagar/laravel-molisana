@@ -1,1 +1,69 @@
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 200px;
+  outline: 1px dotted lightblue;
+}
+header .logo-container {
+  outline: 1px dotted lightblue;
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+header .logo-container img.logo {
+  width: 100%;
+}
+header .header-nav ul {
+  outline: 1px dotted lightblue;
+  list-style: none;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+}
+header .header-nav ul li {
+  outline: 1px dotted lightblue;
+  line-height: 50px;
+  padding: 0 10px;
+  margin: 0 5px;
+}
+header .header-nav ul li:nth-child(2) {
+  background-color: #B2E5FC;
+}
+
+.main-container {
+  background: url(/images/main-bkg.jpg?495cda396bfe9f137038166b61c40759);
+}
+.main-container main {
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.main-container main .section h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 10px 0 5px;
+}
+.main-container main .section .pasta-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.main-container main .section .pasta-container .pasta-item {
+  width: calc(30% - 10px);
+  height: 150px;
+  margin: 5px;
+}
+.main-container main .section .pasta-container .pasta-item .pasta-img {
+  width: 100%;
+}

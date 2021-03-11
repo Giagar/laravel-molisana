@@ -185,82 +185,95 @@
     </head>
     <body>
 
-      <header>
-        <div class="logo-container">
-          <img src="" alt="logo" class="logo">
-        </div>
-        <nav>
-          <ul>
-            @foreach ($headerNavMenu as $itemNav)
-              <li>{{$itemNav}}</li>
-            @endforeach
-          </ul>
-        </nav>
-      </header>
-
-      <div class="main-container">
-        <main>
-          <section class="section paste-lunghe">
-            <h2>LE LUNGHE</h2>
-            <div class="pasta-container">
-              @foreach ($array as $itemPastaLunga)
-                @if ($itemPastaLunga["tipo"] === "lunga")
-                  <div class="pasta-item">{{$itemPastaLunga["titolo"]}}</div>    
-                @endif
+      <div class="wrapper">
+        
+        <header>
+          <div class="logo-container">
+            <img src="{{ asset('img/logo.png') }}" alt="logo" class="logo">
+          </div>
+          <nav class="header-nav">
+            <ul>
+              @foreach ($headerNavMenu as $itemNav)
+                <li>{{$itemNav}}</li>
               @endforeach
-            </div>
-          </section>
+            </ul>
+          </nav>
+        </header>
   
-          <section class="section paste-corte">
-            <h2>LE CORTE</h2>
-            <div class="pasta-container">
-              @foreach ($array as $itemPastaCorta)
+        <div class="main-container">
+          <main>
+            
+            <section class="section paste-lunghe">
+              <h2>LE LUNGHE</h2>
+              <div class="pasta-container">
+                @foreach ($array as $itemPastaLunga)
+                  @if ($itemPastaLunga["tipo"] === "lunga")
+                    <div class="pasta-item">
+                      <img class="pasta-img" src="{{$itemPastaLunga['src']}}" alt="#">
+                    </div>    
+                  @endif
+                @endforeach
+              </div>
+            </section>
+
+            <section class="section paste-corte">
+              <h2>LE CORTE</h2>
+              <div class="pasta-container">
+                @foreach ($array as $itemPastaCorta)
                   @if ($itemPastaCorta["tipo"] === "corta")
-                    <div class="pasta-item">{{$itemPastaCorta["titolo"]}}</div>
+                    <div class="pasta-item">
+                      <img class="pasta-img" src="{{$itemPastaCorta['src']}}" alt="#">
+                    </div>    
                   @endif
-              @endforeach
-            </div>
-          </section>
-  
-          <section class="section paste-corte">
-            <h2>LE CORTISSIME</h2>
-            <div class="pasta-container">
-              @foreach ($array as $itemPastaCortissima)
+                @endforeach
+              </div>
+            </section>
+
+            <section class="section paste-cortissime">
+              <h2>LE  CORTISSIME</h2>
+              <div class="pasta-container">
+                @foreach ($array as $itemPastaCortissima)
                   @if ($itemPastaCortissima["tipo"] === "cortissima")
-                    <div class="pasta-item">{{$itemPastaCortissima["titolo"]}}</div>
+                    <div class="pasta-item">
+                      <img class="pasta-img" src="{{$itemPastaCortissima['src']}}" alt="#">
+                    </div>    
                   @endif
+                @endforeach
+              </div>
+            </section>
+  
+          </main>
+        </div>
+  
+        <div class="footer-container">
+          <footer>
+            <div class="section-left">
+              <div class="logo-container">
+                <img src="" alt="logo" class="logo">
+              </div>
+              <div class="contacts">
+                <ul>
+                  @foreach ($contacts as $contact)
+                      <li>{{$contact}}</li>
+                  @endforeach
+                </ul>
+              </div>
+            </div>
+            <div class="section-right">
+              @foreach ($footerNav as $footerNavTitle=>$footerNavContent)
+                <h3>{{$footerNavTitle}}</h3>
+                <ul></ul>
+                  @foreach ($footerNavContent as $footerNavItem)
+                      <li>{{$footerNavItem}}</li>
+                  @endforeach
+                  
               @endforeach
             </div>
-          </section>
-        </main>
+          </footer>
+        </div>
+
       </div>
 
-      <div class="footer-container">
-        <footer>
-          <div class="section-left">
-            <div class="logo-container">
-              <img src="" alt="logo" class="logo">
-            </div>
-            <div class="contacts">
-              <ul>
-                @foreach ($contacts as $contact)
-                    <li>{{$contact}}</li>
-                @endforeach
-              </ul>
-            </div>
-          </div>
-          <div class="section-right">
-            @foreach ($footerNav as $footerNavTitle=>$footerNavContent)
-              <h3>{{$footerNavTitle}}</h3>
-              <ul></ul>
-                @foreach ($footerNavContent as $footerNavItem)
-                    <li>{{$footerNavItem}}</li>
-                @endforeach
-                
-            @endforeach
-          </div>
-        </footer>
-      </div>
 
         
        
