@@ -55,7 +55,8 @@ header {
 }
 
 .main-container {
-    background: url("../../public/img/main-bkg.jpg");
+    background: url("../../public/img/main-bkg.jpg") no-repeat;
+    background-size: cover;
 
     main {
         width: 900px;

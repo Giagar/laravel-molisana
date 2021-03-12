@@ -42,7 +42,8 @@ header .header-nav ul li:nth-child(2) {
 }
 
 .main-container {
-  background: url(/images/main-bkg.jpg?495cda396bfe9f137038166b61c40759);
+  background: url(/images/main-bkg.jpg?495cda396bfe9f137038166b61c40759) no-repeat;
+  background-size: cover;
 }
 .main-container main {
   width: 900px;
