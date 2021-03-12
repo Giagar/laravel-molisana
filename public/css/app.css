@@ -37,33 +37,60 @@ header .header-nav ul li:nth-child(2) {
   background-color: #B2E5FC;
 }
 
-.main-container {
+.main-container-home {
   background: url(/images/main-bkg.jpg?495cda396bfe9f137038166b61c40759) no-repeat;
   background-size: cover;
 }
-.main-container main {
+.main-container-home main {
   width: 900px;
   margin: 0 auto;
   padding: 20px 0;
 }
-.main-container main .section h2 {
+.main-container-home main .section h2 {
   font-size: 1.2rem;
   font-weight: 400;
   padding: 10px 0 5px;
 }
-.main-container main .section .pasta-container {
+.main-container-home main .section .pasta-container {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 900px;
 }
-.main-container main .section .pasta-container .pasta-item {
+.main-container-home main .section .pasta-container .pasta-item {
   width: calc(30% - 10px);
   height: 150px;
   margin: 5px;
 }
-.main-container main .section .pasta-container .pasta-item .pasta-img {
+.main-container-home main .section .pasta-container .pasta-item .pasta-img {
   width: 100%;
+}
+
+.main-container-product {
+  background: #B8DAE5;
+  padding: 50px 0;
+  color: #224272;
+}
+.main-container-product h1 {
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.main-container-product .img-container {
+  text-align: center;
+}
+.main-container-product .img-container img.pasta-top {
+  height: 300px;
+}
+.main-container-product .img-container img.pasta-bottom {
+  height: 500px;
+}
+.main-container-product .description {
+  width: 900px;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.9rem;
 }
 
 .footer-container {

@@ -49,7 +49,7 @@
 @extends('layouts.master')
 
 @section('main')    
-  <div class="main-container">
+  <div class="main-container-home">
     <main>
       
       <section class="section paste-lunghe">
@@ -58,6 +58,7 @@
           @foreach ($pastaArray as $key=>$itemPastaLunga)
             @if ($itemPastaLunga["tipo"] === "lunga")
               <div class="pasta-item">
+                {{-- aggiungo 1 qui e nei seguenti link per non avere index === 0 e conseguenti problemi con verifica empty in route // in product tolgo 1 --}}
                 <a href="/product/{{$key + 1}}">
                   <img class="pasta-img" src="{{$itemPastaLunga['src']}}" alt="#">
                 </a>

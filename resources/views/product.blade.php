@@ -49,12 +49,15 @@
 @extends('layouts.master')
 
 @section('main')
-  questa è la pagina prodotto {{ $idProduct }}
-
-  {{ $pastaArray[$idProduct - 1]['titolo'] }}
-  {{ $pastaArray[$idProduct - 1]['tipo'] }}
-  {{ $pastaArray[$idProduct - 1]['cottura'] }}
-  {{ $pastaArray[$idProduct - 1]['peso'] }}
-  {{ $pastaArray[$idProduct - 1]['descrizione'] }}
+  
+  <main class="main-container-product">
+    {{-- dai seguenti indici tolgo 1 perché l'ho aggiunto nei link delle rispettive paste in home per prevenire problemi con verifica empty in route --}}
+      <h1>{{ $pastaArray[$idProduct - 1]['titolo'] }}</h1>
+      <div class="img-container">
+        <img class="pasta-top" src="{{$pastaArray[$idProduct - 1]['src-h']}}" alt="immagine pasta">
+        <img class="pasta-bottom" src="{{$pastaArray[$idProduct - 1]['src-p']}}" alt="immagine pasta">
+      </div>
+      <p class="description">{!! $pastaArray[$idProduct - 1]['descrizione'] !!}</p>
+  </main>
     
 @endsection
