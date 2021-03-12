@@ -1,9 +1,9 @@
 <?php
 
 $menuNavs = [
-    $headerNavMenu => ["Home", "Prodotti", "News"],
+    "headerNavMenu" => ["Home", "Prodotti", "News"],
 
-    $contacts => [
+    "contacts" => [
       "lorem ipsum",
       "lorem ipsum",
       "lorem ipsum",
@@ -16,7 +16,7 @@ $menuNavs = [
       "lorem ipsum",
     ],
     
-    $footerNav => [
+    "footerNav" => [
       "pastificio"=>[
         "lorem",
         "lorem",
@@ -46,5 +46,7 @@ $menuNavs = [
       ]
     ]
 ];
+
+return $menuNavs;
 
 

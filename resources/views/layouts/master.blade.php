@@ -21,7 +21,7 @@
           </div>
           <nav class="header-nav">
             <ul>
-              @foreach ($headerNavMenu as $itemNav)
+              @foreach ($menuNavs["headerNavMenu"] as $itemNav)
                 <li>{{$itemNav}}</li>
               @endforeach
             </ul>
