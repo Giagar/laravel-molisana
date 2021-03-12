@@ -15,14 +15,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $pasta = config("pasta");
+    $menuNavs = config("menu-nav");
 
     return view('home', [
-        "pastaArray" => $pasta
+        "pastaArray" => $pasta,
+        "menuNavs" => $menuNavs
     ]);
 });
 
 Route::get('/product/{id?}', function($id=null) {
     $pasta = config("pasta");
+    $menuNavs = config("menu-nav");
+
 
     if(empty($id)) {
         return redirect("/");
@@ -34,7 +38,8 @@ Route::get('/product/{id?}', function($id=null) {
     
     return view('product', [
         'idProduct' => $id,
-        "pastaArray" => $pasta
+        "pastaArray" => $pasta,
+        "menuNavs" => $menuNavs
     ]);
 });
 

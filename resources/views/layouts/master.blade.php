@@ -21,6 +21,7 @@
           </div>
           <nav class="header-nav">
             <ul>
+              {{-- @foreach ($headerNavMenu as $itemNav) --}}
               @foreach ($menuNavs["headerNavMenu"] as $itemNav)
                 <li>{{$itemNav}}</li>
               @endforeach
@@ -38,14 +39,14 @@
               </div>
               <div class="contacts">
                 <ul>
-                  @foreach ($contacts as $contact)
+                  @foreach ($menuNavs["contacts"] as $contact)
                       <li>{{$contact}}</li>
                   @endforeach
                 </ul>
               </div>
             </div>
             <div class="section-right">
-              @foreach ($footerNav as $footerNavTitle=>$footerNavContent)
+              @foreach ($menuNavs["footerNav"] as $footerNavTitle=>$footerNavContent)
                 <h3>{{$footerNavTitle}}</h3>
                 <ul>
                   @foreach ($footerNavContent as $footerNavItem)
