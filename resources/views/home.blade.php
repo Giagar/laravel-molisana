@@ -255,7 +255,7 @@
           <footer>
             <div class="section-left">
               <div class="logo-container">
-                <img src="" alt="logo" class="logo">
+                <img src="{{ asset('img/logo.png') }}" alt="logo" class="logo">
               </div>
               <div class="contacts">
                 <ul>
@@ -268,11 +268,11 @@
             <div class="section-right">
               @foreach ($footerNav as $footerNavTitle=>$footerNavContent)
                 <h3>{{$footerNavTitle}}</h3>
-                <ul></ul>
+                <ul>
                   @foreach ($footerNavContent as $footerNavItem)
-                      <li>{{$footerNavItem}}</li>
+                  <li>{{$footerNavItem}}</li>
                   @endforeach
-                  
+                </ul>
               @endforeach
             </div>
           </footer>
