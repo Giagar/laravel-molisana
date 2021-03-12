@@ -58,6 +58,7 @@ header .header-nav ul li:nth-child(2) {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  width: 900px;
 }
 .main-container main .section .pasta-container .pasta-item {
   width: calc(30% - 10px);
