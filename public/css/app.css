@@ -83,12 +83,14 @@ header .header-nav ul li:nth-child(2) {
 }
 .main-container-product .img-container {
   text-align: center;
+  width: 900px;
+  margin: 0 auto;
 }
 .main-container-product .img-container img.pasta-top {
-  height: 300px;
+  width: 100%;
 }
 .main-container-product .img-container img.pasta-bottom {
-  height: 500px;
+  width: 100%;
 }
 .main-container-product .description {
   width: 900px;
