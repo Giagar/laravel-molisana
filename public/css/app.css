@@ -99,6 +99,9 @@ header .header-nav ul li:nth-child(2) {
   font-weight: 400;
   line-height: 1.9rem;
 }
+.main-container-product ol, .main-container-product ul {
+  padding: 10px 0 10px 50px;
+}
 
 .footer-container {
   background: url("/public/img/footer-bkg.jpeg") no-repeat;
